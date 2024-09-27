@@ -19,6 +19,12 @@ const startClockfyWatch = async () => {
   await axios.post(process.env.CLOCKFY_URL, requestPayload, { headers: { "X-Auth-Token": process.env.X_AUTH_TOKEN } })
 
 }
+
+app.get('/', (req, res) => {
+  return res.send('Api está no ar')
+});
+
+
 cron.schedule('0 9 * * *', startClockfyWatch)
 
 app.listen(3000, () => console.log('Ouvindo na porta 3000'))
