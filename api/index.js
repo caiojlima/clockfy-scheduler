@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 });
 
 
-cron.schedule('25 20 * * *', startClockfyWatch)
+cron.schedule('0 9 * * *', startClockfyWatch)
 
 app.listen(3000, () => console.log('Ouvindo na porta 3000'))
 
