@@ -21,7 +21,7 @@ const startClockfyWatch = async () => {
 }
 
 app.get('/', (req, res) => {
-  return res.send('Api está no ar')
+  return res.send('Api está no ar!')
 });
 
 
